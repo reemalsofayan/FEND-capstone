@@ -11,6 +11,8 @@
   line-height : 1.6;
   background-image : url("../media/sky2.jpg");
   }
+
+
   #grid-container {
   display : grid;
   justify-content : center;
@@ -19,8 +21,26 @@
   grid-template-columns : 35vw 35vw;
   grid-template-rows : 45vh 45vh 45vh 45vh 45vh;
   gap : 6px;
-  grid-template-areas : "nav nav" "dd dd" "info info" "fountain-post cityImage" "ft ft";
+  grid-template-areas : "nav nav" "dd dd" "info info" "cityImage cityImage" "ft ft";
   }
+
+
+  @media (max-width: 600px) {
+    #grid-container {
+      
+      display: grid;
+      justify-content : center;
+      width : 100vw;
+   //   margin : auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 45vh 45vh 70vh 45vh ;
+      gap: 6px;
+      grid-template-areas: "nav" "dd" "info" "cityImage" "ft";
+    }
+  }
+
+
+
   #userdates {
   display : flex;
   flex-wrap : wrap;
@@ -31,6 +51,9 @@
   grid-area : dd;
   background-color : rgb(130, 217, 243);
   }
+
+
+
   #nav-title {
   display : flex;
   align-items : center;
@@ -38,9 +61,11 @@
   grid-area : nav;
   padding : 15px;
   }
+
+
   #info {
   display : flex;
-  flex-wrap : wrap;
+  //flex-wrap : wrap;
   align-items : center;
   justify-content : center;
   border : blue solid 1px;
@@ -48,6 +73,9 @@
   grid-area : info;
   background-color : rgb(130, 217, 243);
   }
+
+
+
   .days, .country {
   color : #437FF1;
   }

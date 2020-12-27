@@ -1,8 +1,9 @@
-
-import { handleSubmit } from "./js/application.js"
+import {
+    handleSubmit
+} from "./js/application.js"
 
 document.querySelector('.submit').addEventListener('click', () => {
-    
+
     event.preventDefault();
 
     const date = document.querySelector('#start-date').value;
@@ -10,18 +11,18 @@ document.querySelector('.submit').addEventListener('click', () => {
 
     const todayDate = new Date().toJSON().slice(0, 10);
 
-    if(city == '' || date == '') {
-       
+    if (city == '' || date == '') {
+
         alert('please enter a city and date');
-    
+
     }
-    
-    if(date < todayDate) {
+
+    if (date < todayDate) {
 
 
         alert('invalid travel day');
 
-    }else {
+    } else {
 
         handleSubmit(city);
 
@@ -37,4 +38,6 @@ import './styles/results.scss'
 
 
 
-export { handleSubmit }
+export {
+    handleSubmit
+}
